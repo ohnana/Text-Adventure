@@ -86,7 +86,20 @@ while True:
     else:
         print "What did you say?"
         
-print "You begrudgingly type in your name and social security number. This time, it accepts the information, and you are greeted by a gray and silver flag with the Macintosh logo on it. The Apple Corporation had a flag? Since when? The dock appears, with your picture as one of the dock icons. You click on it, and an entire profile comes up. It's scarily accurate, and almost completely true. The age field is horribly inaccurate, though. It shows the number 56, even though you know that you're not that old. You close the window and try a different program. It's a web browser, with only three buttons. \"Welcome!\" the screen says. \"This is a new experience in computing! The Computing of Trust!\" There was that word again. There are three buttons. One is named \"LEARN about Trusted Computing!\" One is named \"REPORT an offender against your security and safety!\" The last is called \"BROWSE the unregulated web! If you do this, you could be hacked!\" Which button do you select?"
+print "You begrudgingly type in your name and social security number. This time, it accepts the information, and you are greeted by a gray and silver flag with the Macintosh logo on it. The Apple Corporation had a flag? Since when? The dock appears, with your picture as one of the dock icons. You click on it, and an entire profile comes up. It's scarily accurate, and almost completely true. The age field is horribly inaccurate, though. It shows the number 56, even though you know that you're not that old. You close the window and try a different program. It's a web browser, with only four buttons. \"Welcome!\" the screen says. \"This is a new experience in computing! The Computing of Trust!\" There was that word again. There are three buttons. One is named \"LEARN about Trusted Computing!\" One is named \"REPORT an offender against your security and safety!\" One is called \"USE the trusted web!\" The last is called \"BROWSE the unregulated web! If you do this, you could be hacked!\" Which button do you select?"
+
+opt1 = 'LEARN'
+opt2 = 'REPORT'
+opt3 = 'BROWSE'
+finalopt = "USE"
+x = 0
+while True:
+    answer = raw_input('You choose the button marked ")
+    if (answer == opt1 and x < 4):
+        print "A slideshow comes up with cheesy music. It talks about how wonderful and safe you are, because you'll always know who you're talking to online. \'Everyone prospers when we're safe and guarded,\' the final slide says. After the presentation (which really didn\'t contain much information for the number of slides it had), you are returned to the previous page."
+        x += 1
+        continue
+    if (answer == 'REPORT'
 
 # while (selectedOpts[1] == false || selectedOpts[2] == false || selectedOpts[3] == false) { if (user picks opt1) {selectedOpts[1] = true} elseif (user picks opt2) {selectedOpts[2] = true} etc. }
 #so, i have 3 options. I want the user to try all of them. Everytime the user selects one, increment a variable by 1. If the variable equals three, exit
