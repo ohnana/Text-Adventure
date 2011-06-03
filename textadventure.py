@@ -12,7 +12,7 @@ correct = 'YES'
 wrong = 'NO'
 
 while True:
-    answer = raw_input()
+    answer = raw_input().upper()
     if answer == correct:
         print "Then let\'s begin!"
         break
@@ -29,7 +29,7 @@ derp = 'CRY'
 wrong = 'LEAVE'
 
 while True:
-    answer = raw_input('You will ')
+    answer = raw_input('You will ').upper()
     if answer == correct:
         a['r']
         break
@@ -50,7 +50,7 @@ correct = 'COMPUTER'
 derp = 'HAT'
 
 while True:
-    answer = raw_input('You will look at the ')
+    answer = raw_input('You will look at the ').upper()
     if answer == correct:
         a['r']
         break
@@ -59,7 +59,7 @@ while True:
         continue
     elif answer == derp: 
         print "The hat is carnivorous. It clamps itself on your arm, releasing natural toxin into your body. After you pass out, it slowly digests your body. You are now dead. The adventure is over."
-        time.sleep(30) #Is this too much time to read the above statement? Or too little?
+        time.sleep(20) #Is this too much time to read the above statement? Or too little?
         sys.exit()
     else:
         a['W']
@@ -73,7 +73,7 @@ clue = 'FORGE'
 derp = 'MASTURBATE'
 
 while True: 
-    answer = raw_input('You will ')
+    answer = raw_input('You will ').upper()
     if answer == correct:
         a['r']
         break
@@ -96,7 +96,7 @@ opt3 = 'BROWSE'
 finalopt = "USE"
 x = 0
 #while True:
-#    answer = raw_input('You choose the button marked ")
+#    answer = raw_input('You choose the button marked ").upper()
 #    if (answer == opt1 and x < 4):
 #        print "A slideshow comes up with cheesy music. It talks about how wonderful and safe you are, because you'll always know who you're talking to online. \'Everyone prospers when we're safe and guarded,\' the final slide says. After the presentation (which really didn\'t contain much information for the number of slides it had), you are returned to the previous page."
 #        x += 1
