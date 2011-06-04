@@ -6,6 +6,51 @@ a={'W':"What did you say?", 'r':"Excellent choice."}
 import sys
 import time
 
+class Player(object):
+    """Player is an object (a user-defined type) that will store information
+about the player's current position within the game (the room they're in
+represented by an integer ID that will be assigned to room objects) along with
+a dictionary containing keys (items in positions) whose values will be a
+function that will act on certain types of objects (eg a normal-key will open
+a normal-door in the game)."""
+
+    def __init__(self):
+        """The player's init function is called whenever we make a new player
+by writing 'Player()'. This will set the player up to be able to hold a room
+ID and a dictionary of items (as well as a save-file name)."""
+        self.items = {}
+        self.room_id = 0
+        self.save_file = "playersave.txt"
+    
+    def save_state(self):
+        """Write the player's room id, then items (and their description) to
+a file."""
+        try:
+            f = open(self.save_file, "w")
+        except IOError:
+            raise IOError("You may need to give this program higher "
+                          "permissions in order to save your state.")
+        f.write(str(self.room_id) + "\n")
+        for item in self.items.keys():
+            f.write(item + "\n")
+            f.write(self.items[item] + "\n")
+        f.close()
+        return True
+        
+    def load_state(self):
+        """Read the information stored by save_state into the Player object."""
+        try:
+            f = open(self.save_file, "r")
+        except IOError:
+            print("No save-file {0} found.".format(self.save_file))
+            return False
+        self.room_id = int(f.readline().replace("\n", ""))
+        for line in f:
+            item_name = line.replace("\n", "")
+            self.items[item_name] = f.readline().replace("\n", "")
+        f.close()
+        return True
+
 print "Welcome to the Text Adventure written by Ohnana. Your choices for each step are in all capitals. All words in capitals are valid choices. Type the choices in all caps. Do you understand? YES or NO?"
 
 correct = 'YES'
